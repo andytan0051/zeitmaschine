@@ -1,5 +1,8 @@
-html{
-    font-family: 'Mulish', sans-serif; ;
+*{margin:0; padding:0;}
+
+
+body{
+    font-family: 'Mulish', sans-serif;
 }
 
 header{
@@ -8,35 +11,42 @@ header{
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .2)), url("../images/delorean-palm-unsplash.jpg");
     background-size: cover;
     background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 48px;
 }
 
 nav{
-    height: 30%;
+
+
     display: flex;
     color: rgb(247, 247, 247);
     justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+
+
 }
 
 nav h1{
-  border: black dashed 5px;
+
     margin-left: 72px;
     font-size: 24px;
     font-weight: bolder;
+
+
 }
 
-nav ul{
+nav ul {
+    width: 65%;
     list-style: none;
     font-size: 13px;
     font-weight: bold;
     display: flex;
-    justify-content: flex-end;
-    border: black dashed 5px;
-}
+    justify-content: space-evenly;
 
-nav ul li{
-    display: inline-block;
-    border: white 5px dashed;
-    margin-right: 150px;
+
 }
 
 nav ul a{
@@ -52,8 +62,6 @@ nav ul li a:hover{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    border: dashed deepskyblue;
-    height: 35%;
 }
 
 span{
@@ -81,104 +89,95 @@ span{
     text-decoration: underline;
 }
 
-#dunkle_infokarten{
+#dark_infocards{
 
     display: flex;
     justify-content: flex-end;
-    height: 35%;
 
 }
 
-.dunkle_karte{
+.dark_card{
     background: rgb(53, 53, 53);
     border-right: solid rgba(255, 255, 255, 0.08) 1px;
     font-size: 16px;
     font-weight: normal;
-    width: 32%;
+    width: 26%;
     padding: 3% 3%;
     display: flex;
-
 
 }
 
 .text{
     margin-left: 24px;
-    border: red 5px dashed;
-
 }
 
-.ueberschrift{
+.title{
     color: rgb(247, 247, 247);
-    border: cadetblue dashed 5px;
     margin-top: 0px;
 }
 
-.beschreibung{
+.description{
 
     color: rgb(187, 187, 187);
     line-height: 24px;
-    border: white dashed 5px;
     margin-top: 24px;
 }
 
-.dunkle_karte img{
+.dark_card img{
     float: left;
     height: 45px;
     width: 45px;
-    border: cadetblue 5px dashed;
 }
 
-#helle_infokarten{
-    margin-top: 48px;
+#bright_infocards{
     display: flex;
     width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: auto;
     font-size: 16px;
     font-weight: normal;
+
 }
 
-.helle_karte{
+.bright_card{
     margin-left: 50px;
 }
 
-.helle_karte h2{
+.bright_card h2{
     margin-top: 16px;
     margin-bottom: 8px;
     color: rgb(51, 51, 51);
 }
 
-.helle_karte img{
+.bright_card img{
     height: 32px;
     width: 32px;
 }
 
-.helle_karte p{
+.bright_card p{
     line-height: 30px;
     color: rgb(153, 153, 153);
 }
 
 #footer{
-    height: 150px;
     background: rgb(245, 245, 245);
     display: flex;
     justify-content: space-around;
 }
 
-.footer_column{
-    border: black 5px dashed;
-
-}
-
-.footer_coloum h3{
+.footer_column h3{
     font-size: 18px;
     font-weight: 600;
     color: rgb(68, 68, 68);
+    margin-top: 40px;
+}
+
+.footer_column ul{
+    margin-top: 30px;
+    margin-bottom: 60px;
 }
 
 .footer_column ul li{
     list-style: none;
-    border: black 5px dashed;
 
 }
 
@@ -189,4 +188,35 @@ span{
 
 .footer_column ul li a:hover{
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 950px) {
+    nav h1{
+        margin-left: 0px;
+
+    }
+
+    .description{
+        display: none;
+    }
+
+    #bright_infocards{
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    nav {
+        background: rgb(53, 53, 53);
+    }
+
+    #dark_infocards{
+        visibility: hidden;
+    }
+
+    #bright_infocards{
+        width: 100%;
+        flex-direction: column;
+    }
+
 }
